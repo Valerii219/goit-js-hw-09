@@ -5,7 +5,7 @@ body: document.querySelector('body')
 };
 
 let timerId = null;
-
+refs.stop.setAttribute('disabled', true);
 refs.body.style.backgroundColor = "";
 
 const clickStart = refs.start.addEventListener('click', () => {
@@ -27,11 +27,16 @@ function timer(){
 
 function buttonStart(){
     if(clickStart !== true)
-    {refs.start.setAttribute('disabled', true)}
+    {refs.start.setAttribute('disabled', true);  refs.stop.removeAttribute('disabled')};
+    
+
+    
 }
     function buttonStop(){
+        
         if(clickStop !== true){
             refs.start.removeAttribute('disabled');
+            refs.stop.setAttribute('disabled', true);
         }
     }
 
