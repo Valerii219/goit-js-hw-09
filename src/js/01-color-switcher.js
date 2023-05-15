@@ -21,25 +21,21 @@ const clickStop = refs.stop.addEventListener('click', () =>{
 
 function timer(){
     timerId = setInterval(() => {
-        console.log(refs.body.style.backgroundColor = getRandomHexColor());
+    console.log(refs.body.style.backgroundColor = getRandomHexColor());
     }, 1000)
 }
 
 function buttonStart(){
     if(clickStart !== true)
     {refs.start.setAttribute('disabled', true);  refs.stop.removeAttribute('disabled')};
-    
-
-    
 }
     function buttonStop(){
-        
         if(clickStop !== true){
-            refs.start.removeAttribute('disabled');
-            refs.stop.setAttribute('disabled', true);
+        refs.start.removeAttribute('disabled');
+        refs.stop.setAttribute('disabled', true);
         }
     }
+    function getRandomHexColor() {
+        return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, 0)}`;
+    }
 
-function getRandomHexColor() {
-    return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, 0)}`;
-  }
