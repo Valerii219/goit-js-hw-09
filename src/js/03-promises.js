@@ -6,3 +6,8 @@ function createPromise(position, delay) {
     // Reject
   }
 }
+
+const refs = {
+  button:document.querySelector('button')
+};
+refs.button.addEventListener("submit", )
