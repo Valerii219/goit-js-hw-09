@@ -1,8 +1,8 @@
-// all modules
-// import Notiflix from 'notiflix';
+
+import Notiflix from 'notiflix';
 
 
-  form.document.querySelector('form'),
+ const form = document.querySelector('form');
  
   
 function createPromise(position, delay) {
@@ -33,9 +33,9 @@ form.addEventListener('submit', (ev) => {
   
   { createPromise(i,  delay + (i - 1) * step )
     .then(({ position, delay }) => {
-      // Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);;
+      Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);;
     })
     .catch(({ position, delay }) => {
-      // Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
+      Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
     });}}
   )

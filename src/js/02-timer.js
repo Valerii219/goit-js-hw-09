@@ -1,5 +1,6 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
+import Notiflix from 'notiflix';
 
 // ////////////////======= бібліотеку import Notiflix from 'notiflix'; не хоче підключати до цього завдання, до 3 завдання підключило успішно!
 // Build failed.
@@ -26,7 +27,7 @@ const dataFlatOpt = flatpickr('#datetime-picker', {
   minuteIncrement: 1,
   onClose(selectedDates) {
     if (selectedDates[0] <= Date.now()) {
-      window.alert('Please choose a date in the future');
+      Notiflix.Report.warning('Please choose a date in the future');
     }
     if (selectedDates[0] >= Date.now()) {
       buttonStart.removeAttribute('disabled');
