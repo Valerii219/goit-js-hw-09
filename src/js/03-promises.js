@@ -1,8 +1,9 @@
+// all modules
+// import Notiflix from 'notiflix';
 
 
-const refs = {
-  form:document.querySelector('form'),
- };
+  form.document.querySelector('form'),
+ 
   
 function createPromise(position, delay) {
   const shouldResolve = Math.random() > 0.3;
@@ -16,7 +17,7 @@ function createPromise(position, delay) {
   }, delay)});}
     
 
-  refs.form.addEventListener('submit', (ev) => { 
+form.addEventListener('submit', (ev) => { 
   ev.preventDefault();
 
   const delayI = document.querySelector('.form input[name = "delay"]');
