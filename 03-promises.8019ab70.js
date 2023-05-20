@@ -1,2 +1,0 @@
-form.document.querySelector("form"),form.addEventListener("submit",(function(e){e.preventDefault();for(var t=document.querySelector('.form input[name = "delay"]'),n=document.querySelector('.form input[name = "step"]'),o=document.querySelector('.form input[name = "amount"]'),r=parseInt(t.value),u=parseInt(n.value),a=parseInt(o.value),m=0;m<a;m+=1)createPromise(m,r+(m-1)*u).then((function(e){e.position,e.delay})).catch((function(e){e.position,e.delay}))}));
-//# sourceMappingURL=03-promises.8019ab70.js.map

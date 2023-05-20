@@ -1,2 +1,0 @@
-form.document.querySelector("form"),form.addEventListener("submit",(e=>{e.preventDefault();const t=document.querySelector('.form input[name = "delay"]'),o=document.querySelector('.form input[name = "step"]'),r=document.querySelector('.form input[name = "amount"]'),n=parseInt(t.value),a=parseInt(o.value),u=parseInt(r.value);for(let e=0;e<u;e+=1)createPromise(e,n+(e-1)*a).then((({position:e,delay:t})=>{})).catch((({position:e,delay:t})=>{}))}));
-//# sourceMappingURL=03-promises.8d128c79.js.map
