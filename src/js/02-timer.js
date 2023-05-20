@@ -1,6 +1,14 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 
+// ////////////////======= бібліотеку import Notiflix from 'notiflix'; не хоче підключати до цього завдання, до 3 завдання підключило успішно!
+// Build failed.
+
+// @parcel/core: Failed to resolve 'dist/notiflix-3.2.6.min.css' from './src/02-timer.html'
+
+// @parcel/resolver-default: Cannot load file './dist/notiflix-3.2.6.min.css' in './src'.
+
+// ======////////////
 
 const buttonStart = document.querySelector('button[data-start]');
 
@@ -64,3 +72,13 @@ function timer(deltaTime) {
   minutesEl.textContent = `${minutes.toString().padStart(2, '0')}`;
   secondsEl.textContent = `${seconds.toString().padStart(2, '0')}`;
 }
+
+
+// ////////////////======= бібліотеку import Notiflix from 'notiflix'; не хоче підключати до цього завдання, до 3 завдання підключило успішно!
+// Build failed.
+
+// @parcel/core: Failed to resolve 'dist/notiflix-3.2.6.min.css' from './src/02-timer.html'
+
+// @parcel/resolver-default: Cannot load file './dist/notiflix-3.2.6.min.css' in './src'.
+
+// ======////////////
