@@ -23,17 +23,21 @@ const dataFlatOpt = flatpickr('#datetime-picker', {
     if (selectedDates[0] >= Date.now()) {
       buttonStart.removeAttribute('disabled');
     } else {
-      buttonStart.setAttribute('disabled', true);
+      disabledButton;
     }
     const startTime = selectedDates[0];
     const startTimeInSec = startTime.getTime();
-
+  
     const buttonClick = buttonStart.addEventListener('click', () => {
-      {
-        setInterval(() => {
-          const currentTime = Date.now();
-          const deltaTime = startTimeInSec - currentTime;
-          timer(deltaTime);
+      buttonStart.setAttribute('disabled', true);
+      {const timeInt =  setInterval(() => {
+        const currentTime = Date.now();
+        const deltaTime = startTimeInSec - currentTime;
+        timer(deltaTime);
+        if((deltaTime) <= 1000){
+          clearInterval(timeInt)
+          buttonStart.removeAttribute('disabled');
+        }
         }, 1000);
       }
     });
@@ -56,7 +60,6 @@ function convertMs(ms) {
   const seconds = Math.floor((((ms % day) % hour) % minute) / second);
   return { days, hours, minutes, seconds };
 }
-
 function timer(deltaTime) {
   const { days, hours, minutes, seconds } = convertMs(deltaTime);
   dayEl.textContent = `${days.toString().padStart(2, '0')}`;
@@ -64,5 +67,3 @@ function timer(deltaTime) {
   minutesEl.textContent = `${minutes.toString().padStart(2, '0')}`;
   secondsEl.textContent = `${seconds.toString().padStart(2, '0')}`;
 }
-
-
